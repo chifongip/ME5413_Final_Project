@@ -12,7 +12,7 @@
     
     <!-- <rosparam file="$(find me5413_world)/src/params/base_local_planner_params.yaml" command="load" /> -->
     
-    <rosparam file="$(find teb_local_planner_tutorials)/cfg/diff_drive/teb_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find me5413_world)/src/teb_local_planner_params.yaml" command="load" />
     <!-- <rosparam file="$(find cartographer_ros)/cfg/teb_local_planner_params.yaml" command="load" /> -->
     
     <rosparam file="$(find me5413_world)/src/params/move_base_params.yaml" command="load" />
