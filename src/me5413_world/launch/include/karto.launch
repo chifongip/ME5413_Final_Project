@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node pkg="slam_karto" type="slam_karto" name="slam_karto" output="screen">
+    <remap from="scan" to="/front/scan" />
+    <remap from="imu" to="/imu/data" />
+    <remap from="odom" to="/odometry/filtered" />
+    
+    <param name="map_frame" type="string" value="map"/>
+    <param name="odom_frame" type="string" value="odom"/>
+    <param name="base_frame" type="string" value="base_link"/>
+    <param name="use_sim_time" type="bool" value="true"/>
+    
+    <param name="map_update_interval" value="0.5"/>
+    <param name="resolution" value="0.05"/>
+
+    <rosparam command="load" file="$(find me5413_world)/launch/config/mapper_params.yaml" />
+  </node>
+
+</launch>
+
